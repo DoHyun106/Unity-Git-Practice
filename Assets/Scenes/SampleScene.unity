@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 555556297}
   - component: {fileID: 555556296}
   - component: {fileID: 555556295}
+  - component: {fileID: 555556298}
   m_Layer: 5
   m_Name: Button_EscapeNo
   m_TagString: Untagged
@@ -288,7 +289,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 555556296}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 555556298}
+        m_TargetAssemblyTypeName: ProgramEscape, Assembly-CSharp
+        m_MethodName: escapeNoButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &555556296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +340,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555556293}
   m_CullTransparentMesh: 1
+--- !u!114 &555556298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555556293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9816e79ece21c044ae665d54dbaa911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screanEscape: {fileID: 1881088118}
+  escapeYes: {fileID: 0}
+  escapeNo: {fileID: 555556293}
 --- !u!1 &1072625455
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +501,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screanEscape: {fileID: 1881088118}
+  escapeYes: {fileID: 0}
+  escapeNo: {fileID: 0}
 --- !u!1 &1391840944
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +817,7 @@ GameObject:
   - component: {fileID: 1965262286}
   - component: {fileID: 1965262285}
   - component: {fileID: 1965262284}
+  - component: {fileID: 1965262287}
   m_Layer: 5
   m_Name: Button_EscapeYes
   m_TagString: Untagged
@@ -857,7 +888,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1965262285}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1965262287}
+        m_TargetAssemblyTypeName: ProgramEscape, Assembly-CSharp
+        m_MethodName: escapeYesButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1965262285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,6 +939,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965262282}
   m_CullTransparentMesh: 1
+--- !u!114 &1965262287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965262282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9816e79ece21c044ae665d54dbaa911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screanEscape: {fileID: 0}
+  escapeYes: {fileID: 1965262282}
+  escapeNo: {fileID: 0}
 --- !u!1 &2058415898
 GameObject:
   m_ObjectHideFlags: 0
