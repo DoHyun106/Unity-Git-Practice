@@ -36,4 +36,3 @@ public class ProgramEscape : MonoBehaviour
         Debug.Log("Activate false [screanEscape]");  // 디버그 " 종료 메시지 창 비활성화 "
     }
 }
-}
