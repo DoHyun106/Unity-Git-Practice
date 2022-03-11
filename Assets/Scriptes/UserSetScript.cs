@@ -15,7 +15,7 @@ public class SetScript : MonoBehaviour
     // 오디오 슬라이더 컨트롤 오브젝트
     public Slider sliderMaster, sliderBGM, sliderSFX, sliderMenuSFX;
 
-    // UserSet Funtion
+    // UserSet Funtion  ############################################
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -34,8 +34,8 @@ public class SetScript : MonoBehaviour
         Time.timeScale = 1f;
     }
     
-    // Audio Control Funtion
-    public void audioMasterControl()
+    // Audio Control Funtion    ##################################################
+    public void audioMasterControl()    // Master Aduio
     {
         float volume = sliderMaster.value;
 
@@ -48,7 +48,7 @@ public class SetScript : MonoBehaviour
             audioMixer.SetFloat("Master", volume);
         }
     }
-    public void audioBGMControl()
+    public void audioBGMControl()   // BGM Audio
     {
         float volume = sliderBGM.value;
 
@@ -61,8 +61,34 @@ public class SetScript : MonoBehaviour
             audioMixer.SetFloat("BGM", volume);
         }
     }
+    public void audioSFXControl()   // SFX Aduio
+    {
+        float volume = sliderSFX.value;
 
-    // Escape Funtion
+        if (volume == -40f)
+        {
+            audioMixer.SetFloat("SFX", -80);
+        }
+        else
+        {
+            audioMixer.SetFloat("SFX", volume);
+        }
+    }
+    public void audioMenuSFXControl()   // MenuSFX Audio
+    {
+        float volume = sliderSFX.value;
+
+        if (volume == -40f)
+        {
+            audioMixer.SetFloat("SFX", -80);
+        }
+        else
+        {
+            audioMixer.SetFloat("SFX", volume);
+        }
+    }
+
+    // Escape Funtion   #######################################################
     public void openEscapeMassage()
     {
         escapeMassage.SetActive(true);
@@ -76,4 +102,6 @@ public class SetScript : MonoBehaviour
     {
         escapeMassage.SetActive(false);
     }
+
+    // Graphic Funtion  #########################################################
 }
