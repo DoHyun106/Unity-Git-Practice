@@ -4,25 +4,28 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class SetScript : MonoBehaviour
+public class UserSetScript : MonoBehaviour
 {
     // 종료 안내 오브젝트
     public GameObject escapeMassage, escapeYes, escapeNo;
     // 설정 패널 오브젝트
-    public GameObject userSetPanel;
+    public GameObject userSetPanel, userSetCloseButton;
     // 오디오 믹서
     public AudioMixer audioMixer;
     // 오디오 슬라이더 컨트롤 오브젝트
     public Slider sliderMaster, sliderBGM, sliderSFX, sliderMenuSFX;
-
-    // UserSet Funtion  ############################################
+    
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        // UserSet Funtion
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             openUserSetPanel();
         }
+
     }
+
+    // UserSet Funtion  ############################################
     public void openUserSetPanel()
     {
         Time.timeScale = 0f;
@@ -70,7 +73,7 @@ public class SetScript : MonoBehaviour
             audioMixer.SetFloat("SFX", -80);
         }
         else
-        {
+        { 
             audioMixer.SetFloat("SFX", volume);
         }
     }
@@ -97,11 +100,8 @@ public class SetScript : MonoBehaviour
     {
         Application.Quit();
     }
-
     public void unexcuteEscape()
     {
         escapeMassage.SetActive(false);
     }
-
-    // Graphic Funtion  #########################################################
 }
