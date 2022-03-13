@@ -11,14 +11,14 @@ public class GraphicToggle : MonoBehaviour
         {
             Debug.Log("toggle Graphic [ High ]");
             QualitySettings.SetQualityLevel(3, true);
-            Application.targetFrameRate = 60;
+            //Application.targetFrameRate = 60;
             Debug.Log("Graphic Quility Level set 3");
         }
         else
         {
             Debug.Log("toggle Graphic [ Low ]");
             QualitySettings.SetQualityLevel(1, true);
-            Application.targetFrameRate = 30;
+            //Application.targetFrameRate = 30;
             Debug.Log("Graphic Quility Level set 1");
         }
     }
